@@ -17,7 +17,7 @@ The solution files for the challenge problem are located at ```ec/bt-postfix-sol
 - `bool greater_precedence(char lhs, char rhs)`, assuming lhs and rhs are operators, `greater_precedence()` will return true iff precedence(lhs) > precedence(rhs). So greater_precedence('x', '+') evaluate to true.
 - `bool is_op(char t)`, returns true if `t` is an operator. This function is very usefule for your impelemenetation!!!
 - `shared_ptr<Node> convert_to_tree(string expression)`, assuming a legal expression, and your impelementation is correct, this function will turn an expression into a tree
-- `int evaluate(string expression)`, assuming a legal expression, this function relies on the helper function `void evaluate_helper(shared_ptr<Node> root, stack<int>& tokens` that you will implement
+- `int evaluate(string expression)`, assuming a legal expression, this function relies on the helper function `evaluate_helper()` that you will implement
 - `void clear(shared_ptr<Node>& root`, simply deallocates memory
 
 
@@ -25,13 +25,13 @@ The solution files for the challenge problem are located at ```ec/bt-postfix-sol
   You will convert an expression into a binary tree such that if you were to do an inorder traversal of the tree, the program would spit back the exact same expression you entered. 
 
 For example, if you were to enter "1x2+3", you program should come up with the tree below:
-```
+`
                      +
                    /   \ 
                   x     3
                 /   \
                1     2
-```
+`
 You are given a node struct(slightly modified version of the node in the lab13 challenge problem by Moses Lee). The node has a left child, right child, and a parent. The node is also associated with a token character.
 You will implement 2 functions:  
 (1) `shared_ptr<Node> insert_op(shared_ptr<Node> root, char op)`
