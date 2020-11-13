@@ -25,13 +25,13 @@ The solution files for the challenge problem are located at `ec/bt-postfix-solut
   You will convert an expression into a binary tree such that if you were to do an inorder traversal of the tree, the program would spit back the exact same expression you entered. 
 
 For example, if you were to enter "1x2+3", you program should come up with the tree below:
-`
+```
                      +
                    /   \ 
                   x     3
                 /   \
                1     2
-`
+```
 You will implement 2 functions:  
 (1) `shared_ptr<Node> insert_op(shared_ptr<Node> root, char op)`
   Assuming 'op' is an operator, you will allocate a new node, and I'll leave it to you to figure out where your new node needs to be inserted(**Hint**: draw out a tree, and see what happens when you add a new operator node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
@@ -54,12 +54,13 @@ In main.cpp, the program will prompt you to enter an expression. If you impeleme
   Once you have the proper tree setup, you now need to implement the postfix evaluation algorithm. 
   
 Here is the algorithm(taken from GeeksForGeeks):
+```
   1) Create a stack to store operands (or values).
   2) Scan the given expression and do following for every scanned element.
-- a) If the element is a number, push it into the stack
-- b) If the element is a operator, pop operands for the operator from stack. Evaluate the operator and push the result back to the stack
+     a) If the element is a number, push it into the stack
+     b) If the element is a operator, pop operands for the operator from stack. Evaluate the operator and push the result back to the stack
   3) When the expression is ended, the number in the stack is the final answer
-
+```
 So, suppose we have the expression "12x3+". By the algorithm, we push '1' to the stack. Then, we push '2' to the stack. Then, when we encounter 'x', we pop 2 from stack and pop 1 from stack. Multiply 1x2 to get result 2. Push 2 to stack. Then, push 3 to stack. Then, we when we encounter '+', pop 3 from stack and pop 2 from stack. Add 2+3 to get result 5. Push 5 to stack. 
 
 You are tasked to impelement one function:
