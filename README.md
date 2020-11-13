@@ -1,7 +1,7 @@
 # READ THIS
 
-The challenge problem files are located at `ec/bt-postfix` directory
-The solution files for the challenge problem are located at `ec/bt-postfix-solution` directory.
+- The challenge problem files are located at `ec/bt-postfix` directory
+- The solution files for the challenge problem are located at `ec/bt-postfix-solution` directory.
 
 # The Challenge Problem
 **Context**:
