@@ -55,7 +55,7 @@ You are tasked to impelement one function:
 void evaluate_helper(shared_ptr<Node> root, stack<int>& tokens) {
 (**Hint**: what kind of traversal would you need for POSTfix expression?)
 
-side note:
+# side note:
 You can also look at my Rubix files... but they're not even close to complete. The idea was to make a Rubix cube, randomly scramble it, and then try to solve it using the A* algorithm. However, it is too time consuming for me to do for an extra credit assignment, so I leave it to you if you want to impelement it as a future homework assignment. 
 
 Welcome to my github page! :)
