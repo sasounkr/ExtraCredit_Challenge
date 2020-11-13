@@ -1,6 +1,7 @@
 # READ THIS
 
-The solution files for the challenge problem are located at ec/bt-postfix directory.
+The challenge problem files are located at ```ec/bt-postfix``` directory
+The solution files for the challenge problem are located at ```ec/bt-postfix-solution``` directory.
 
 # The Challenge Problem
 **Context**:
@@ -29,7 +30,10 @@ You will implement 2 functions:
 (2) ```shared_ptr<Node> insert_num(shared_ptr<Node> root, char num)``` 
   Assuming 'num' is a number character, you will allocate a new node, and you will figure out how you should insert the new node into the tree(**Hint**: draw out a tree, and see what happens when you add a new number node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
 
+In main.cpp, the program will prompt you to enter an expression. If you impelemented part 1 correctly, the program should spit out the exact same expression you entered. 
+
 # Assumptions:
+- assume that 'expression' can have only SINGLE DIGIT numbers or operators
 - assume that 'expression' will have NO spaces
 - assume that 'expression' will have NO parenthesis(unless you want an extra challenge ;))
 - assume that 'expression' will have the proper amount of operands and operators(so an infix expression like "1+2x" is illegal)
@@ -53,7 +57,7 @@ You are tasked to impelement one function:
 void evaluate_helper(shared_ptr<Node> root, stack<int>& tokens) {
 (**Hint**: what kind of traversal would you need for POSTfix expression?)
 
-side note:
+# side note:
 You can also look at my Rubix files... but they're not even close to complete. The idea was to make a Rubix cube, randomly scramble it, and then try to solve it using the A* algorithm. However, it is too time consuming for me to do for an extra credit assignment, so I leave it to you if you want to impelement it as a future homework assignment. 
 
 Welcome to my github page! :)
