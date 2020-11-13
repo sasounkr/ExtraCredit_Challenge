@@ -14,15 +14,15 @@ The solution files for the challenge problem are located at ec/bt-postfix direct
   You will convert an expression into a binary tree such that if you were to do an inorder traversal of the tree, the program would spit back the exact same expression you entered. 
 
 For example, if you were to enter "1x2+3", you program should come up with the tree below:
-
+```
                      +
                    /   \ 
                   x     3
                 /   \
                1     2
-
+```
 You will implement 2 functions:  
-(1) shared_ptr<Node> insert_op(shared_ptr<Node> root, char op)
+(1) ```shared_ptr<Node> insert_op(shared_ptr<Node> root, char op)```
   Assuming 'op' is an operator, you will allocate a new node, and I'll leave it to you to figure out where your new node needs to be inserted(**Hint**: draw out a tree, and see what happens when you add a new operator node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
   
 (2) shared_ptr<Node> insert_num(shared_ptr<Node> root, char num) 
