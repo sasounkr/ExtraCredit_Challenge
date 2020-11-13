@@ -4,6 +4,27 @@
 #include <memory>
 using namespace std;
 
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////
+
+// THIS IS NOT PART OF THE CHALLENGE PROBLEM! DO NOT ENTER... :)
+
+////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
 enum class Color { GREEN = 'G', BLUE = 'B', ORANGE = 'O', RED = 'R', WHITE = 'W', YELLOW = 'Y' };
 
 struct Face {

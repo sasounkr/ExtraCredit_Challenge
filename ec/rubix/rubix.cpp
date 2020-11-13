@@ -1,5 +1,30 @@
 #include "rubix.h"
 
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////
+
+// THIS IS NOT PART OF THE CHALLENGE PROBLEM! DO NOT ENTER... :)
+
+////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
 RubixCube::RubixCube() : front(make_shared<Face>(Color::GREEN)) {
     shared_ptr<Face> temp = front;
     // allocate data in rightwards direction
