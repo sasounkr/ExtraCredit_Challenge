@@ -32,6 +32,7 @@ bool is_op(char t);
 shared_ptr<Node> insert_op(shared_ptr<Node> root, char op);
 // assuming 'num' is a single digit num
 shared_ptr<Node> insert_num(shared_ptr<Node> root, char num);
+// assuming 'expression' has no spaces at all
 shared_ptr<Node> convert_to_tree(string expression);
 int evaluate(string expression);
 void evaluate_helper(shared_ptr<Node> root, stack<int>& tokens);

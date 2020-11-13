@@ -9,33 +9,17 @@ bool greater_precendence(char lhs, char rhs) {
 bool is_op(char t) { return OP_PRECEDENCE.find(t) != OP_PRECEDENCE.end(); }
 
 shared_ptr<Node> insert_op(shared_ptr<Node> root, char op) {
-    auto temp = root;
-    // assuming the tree isn't empty
-    while (is_op(temp->token) && greater_precendence(op, temp->token)) 
-        temp = temp->right;
-    auto new_node = make_shared<Node>(op, temp, nullptr, temp->parent);
-    if (temp->parent) 
-        temp->parent->right = new_node;
-    else 
-        root = new_node;
-    temp->parent = new_node;
-    return root;
+    // TODO
 }
 
 shared_ptr<Node> insert_num(shared_ptr<Node> root, char num) {
-    auto temp = root;
-    if (temp) {
-        while (temp->right)
-            temp = temp->right;
-        temp->right = make_shared<Node>(num, nullptr, nullptr, temp);
-    }
-    else 
-        root = make_shared<Node>(num, nullptr, nullptr, nullptr);
-    return root;
+    // TODO
 }
 
+// assume string is a valid expression... so nothing like 1+2*
 // assume the string has single digit numbers
 // assume not an empty string
+// assume string has no spaces
 shared_ptr<Node> convert_to_tree(string expression) {
     shared_ptr<Node> root = nullptr;
     for (char t : expression) 
@@ -52,47 +36,13 @@ int evaluate(string expression) {
 }
 
 void evaluate_helper(shared_ptr<Node> root, stack<int>& tokens) {
-    if (!root) return;
-    evaluate_helper(root->left, tokens);
-    evaluate_helper(root->right, tokens);
-    if (is_op(root->token)) {
-        int lhs, rhs, result;
-        rhs = tokens.top();
-        tokens.pop();
-        lhs = tokens.top();
-        tokens.pop();
-        switch (root->token) {
-        case '+':
-            result = lhs + rhs;
-            break;
-        case '-':
-            result = lhs - rhs;
-            break;
-        case '*':
-            result = lhs * rhs;
-            break;
-        case '/':
-            result = lhs / rhs;
-            break;
-        default:
-            result = (int) pow(lhs, rhs);
-        }
-        tokens.push(result);
-    } else {
-        tokens.push(root->token - '0');
-    }
+    // TODO
 }
 
-void clear(shared_ptr<Node> root) {
-    clear_helper(root);
-    root = nullptr;
-}
-
-void clear_helper(shared_ptr<Node> root) {
+void clear(shared_ptr<Node>& root) {
     if (root) {
-        clear_helper(root->left);
-        clear_helper(root->right);
-        root->left = nullptr;
-        root->right = nullptr;
+        clear(root->left);
+        clear(root->right);
+        root = nullptr;
     }
 }
