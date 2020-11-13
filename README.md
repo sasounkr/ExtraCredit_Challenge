@@ -12,7 +12,7 @@ The solution files for the challenge problem are located at ```ec/bt-postfix-sol
   In your impelementation, given a valid expression, you will convert the expression into a binary tree, and then once you do that, you will use the postfix evaluation algorithm(a very simple algorithm) to evaluate an expression. The operators we will consider are +, -, x, /, and ^. Assume all the operators are left associative. 
 
 # Given Code
-- struct `Node` that has members `parent`, `left`, and `right`. The struct also has a char `token` member.
+- struct `Node` that has members `parent`, `left`, and `right`. The struct also has a char `token` member(the struct is a modified version of the Moses Lee's struct in lab13)
 - A constant map `OP_PRECEDENCE` is provided. Given an operator character, `OP_PRECEDENCE` will give you the precedence value of that operator. For example precedence('x') > precedence('+'). 
 - `bool greater_precedence(char lhs, char rhs)`, assuming lhs and rhs are operators, `greater_precedence()` will return true iff precedence(lhs) > precedence(rhs). So greater_precedence('x', '+') evaluate to true.
 - `bool is_op(char t)`, returns true if `t` is an operator. This function is very usefule for your impelemenetation!!!
@@ -32,7 +32,6 @@ For example, if you were to enter "1x2+3", you program should come up with the t
                 /   \
                1     2
 `
-You are given a node struct(slightly modified version of the node in the lab13 challenge problem by Moses Lee). The node has a left child, right child, and a parent. The node is also associated with a token character.
 You will implement 2 functions:  
 (1) `shared_ptr<Node> insert_op(shared_ptr<Node> root, char op)`
   Assuming 'op' is an operator, you will allocate a new node, and I'll leave it to you to figure out where your new node needs to be inserted(**Hint**: draw out a tree, and see what happens when you add a new operator node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
