@@ -36,7 +36,7 @@ You will implement 2 functions:
 - assume that all operators are left associative
 - assume that all operators can consist of only +, -, x, /, and ^.
 
- **2nd Part(easier part): postfix evaluation algorithm**
+# 2nd Part(easier part): postfix evaluation algorithm
   Once you have the proper tree setup, you now need to implement the postfix evaluation algorithm. 
   
 Here is the algorithm(taken from GeeksForGeeks):
