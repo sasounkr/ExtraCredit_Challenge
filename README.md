@@ -11,6 +11,8 @@ The solution files for the challenge problem are located at ```ec/bt-postfix-sol
  **Actual Problem**:
   In your impelementation, given a valid expression, you will convert the expression into a binary tree, and then once you do that, you will use the postfix evaluation algorithm(a very simple algorithm) to evaluate an expression. The operators we will consider are +, -, x, /, and ^. Assume all the operators are left associative. 
 
+# Given Code
+
 # 1st Part(harder part): setting up the binary tree
   You will convert an expression into a binary tree such that if you were to do an inorder traversal of the tree, the program would spit back the exact same expression you entered. 
 
