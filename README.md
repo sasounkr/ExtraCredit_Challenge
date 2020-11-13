@@ -13,7 +13,7 @@
 
 # Given Code
 - struct `Node` that has members `parent`, `left`, and `right`. The struct also has a char `token` member(the struct is a modified version of the Moses Lee's struct in lab13)
-- A constant map `OP_PRECEDENCE` is provided. Given an operator character, `OP_PRECEDENCE` will give you the precedence value of that operator. For example precedence('x') > precedence('+'). 
+- A constant map `OP_PRECEDENCE` is provided. Given an operator character, `OP_PRECEDENCE` will give you the precedence value of that operator. This map is used to impelement `is_op()` and `greater_precedence()`
 - `bool greater_precedence(char lhs, char rhs)`, assuming lhs and rhs are operators, `greater_precedence()` will return true if and only if precedence(lhs) > precedence(rhs). So greater_precedence('x', '+') evaluate to true.
 - `bool is_op(char t)`, returns true if and only if `t` is an operator. This function is very useful for your impelemenetation!!!
 - `shared_ptr<Node> convert_to_tree(string expression)`, assuming a legal expression and assuming your impelementation is correct, this function will turn an expression into a tree
