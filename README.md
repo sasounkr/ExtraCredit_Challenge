@@ -30,6 +30,7 @@ You will implement 2 functions:
   Assuming 'num' is a number character, you will allocate a new node, and you will figure out how you should insert the new node into the tree(**Hint**: draw out a tree, and see what happens when you add a new number node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
 
 # Assumptions:
+- assume that 'expression' can have only SINGLE DIGIT numbers or operators
 - assume that 'expression' will have NO spaces
 - assume that 'expression' will have NO parenthesis(unless you want an extra challenge ;))
 - assume that 'expression' will have the proper amount of operands and operators(so an infix expression like "1+2x" is illegal)
