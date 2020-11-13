@@ -9,8 +9,8 @@ The solution files for the challenge problem are located at ec/bt-postfix direct
   
  **Actual Problem**:
   In your impelementation, given a valid expression, you will convert the expression into a binary tree, and then once you do that, you will use the postfix evaluation algorithm(a very simple algorithm) to evaluate an expression. The operators we will consider are +, -, x, /, and ^. Assume all the operators are left associative. 
-  
- # 1st Part(harder part): setting up the binary tree
+
+# 1st Part(harder part): setting up the binary tree
   You will convert an expression into a binary tree such that if you were to do an inorder traversal of the tree, the program would spit back the exact same expression you entered. 
 
 For example, if you were to enter "1x2+3", you program should come up with the tree below:
@@ -21,6 +21,7 @@ For example, if you were to enter "1x2+3", you program should come up with the t
                 /   \
                1     2
 ```
+You are given a node struct(slightly modified version of the node in the lab13 challenge problem by Moses Lee). The node has a left child, right child, and a parent. The node is also associated with a token character.
 You will implement 2 functions:  
 (1) ```shared_ptr<Node> insert_op(shared_ptr<Node> root, char op)```
   Assuming 'op' is an operator, you will allocate a new node, and I'll leave it to you to figure out where your new node needs to be inserted(**Hint**: draw out a tree, and see what happens when you add a new operator node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
@@ -51,13 +52,6 @@ So, suppose we have the expression "12x3+". By the algorithm, we push '1' to the
 You are tasked to impelement one function:
 void evaluate_helper(shared_ptr<Node> root, stack<int>& tokens) {
 (**Hint**: what kind of traversal would you need for POSTfix expression?)
-
-
-
-# Code that is Implemented for you
-
-
-
 
 side note:
 You can also look at my Rubix files... but they're not even close to complete. The idea was to make a Rubix cube, randomly scramble it, and then try to solve it using the A* algorithm. However, it is too time consuming for me to do for an extra credit assignment, so I leave it to you if you want to impelement it as a future homework assignment. 
