@@ -30,6 +30,8 @@ You will implement 2 functions:
 (2) ```shared_ptr<Node> insert_num(shared_ptr<Node> root, char num)``` 
   Assuming 'num' is a number character, you will allocate a new node, and you will figure out how you should insert the new node into the tree(**Hint**: draw out a tree, and see what happens when you add a new number node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
 
+In main.cpp, the program will prompt you to enter an expression. If you impelemented part 1 correctly, the program should spit out the exact same expression you entered. 
+
 # Assumptions:
 - assume that 'expression' can have only SINGLE DIGIT numbers or operators
 - assume that 'expression' will have NO spaces
