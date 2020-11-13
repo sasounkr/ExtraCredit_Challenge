@@ -25,7 +25,7 @@ You will implement 2 functions:
 (1) ```shared_ptr<Node> insert_op(shared_ptr<Node> root, char op)```
   Assuming 'op' is an operator, you will allocate a new node, and I'll leave it to you to figure out where your new node needs to be inserted(**Hint**: draw out a tree, and see what happens when you add a new operator node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
   
-(2) shared_ptr<Node> insert_num(shared_ptr<Node> root, char num) 
+(2) ```shared_ptr<Node> insert_num(shared_ptr<Node> root, char num)``` 
   Assuming 'num' is a number character, you will allocate a new node, and you will figure out how you should insert the new node into the tree(**Hint**: draw out a tree, and see what happens when you add a new number node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
 
 # Assumptions:
