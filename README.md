@@ -42,6 +42,7 @@ You will implement 2 functions:
 In main.cpp, the program will prompt you to enter an expression. If you impelemented part 1 correctly, the program should spit out the exact same expression you entered. 
 
 # Assumptions:
+- assume that `expression` has at least 1 token(so the empty string is illegal)
 - assume that `expression` can have only SINGLE DIGIT numbers or operators
 - assume that `expression` will have NO spaces
 - assume that `expression` will have NO parenthesis(unless you want an extra challenge ;))
