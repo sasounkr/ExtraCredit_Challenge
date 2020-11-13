@@ -8,7 +8,7 @@ The solution files for the challenge problem are located at ec/bt-postfix direct
   The type of expression we see in our daily lives is called an "infix expression". Unfortunately, computers can't really make sense of infix expressions, but, they can easily evaluate what's called a postfix expression. In a postfix expression, most of the operators go to the right of the operands. For example, "1+2x3" would become "123x+", and "1x2+3" would be "12x3+".
   
  **Actual Problem**:
-  In your impelementation, given a valid expression, you will convert the expression into a binary tree, and then once you do that, you will use the postfix evaluation algorithm(a very simple algorithm) to evaluate an expression.
+  In your impelementation, given a valid expression, you will convert the expression into a binary tree, and then once you do that, you will use the postfix evaluation algorithm(a very simple algorithm) to evaluate an expression. The operators we will consider are +, -, x, /, and ^. Assume all the operators are left associative. 
   
  **1st Part(harder part): setting up the binary tree**
   You will convert an expression into a binary tree such that if you were to do an inorder traversal of the tree, the program would spit back the exact same expression you entered. 
@@ -26,6 +26,14 @@ You will implement 2 functions:
 (2) shared_ptr<Node> insert_num(shared_ptr<Node> root, char num) 
   Assuming 'num' is a number character, you will allocate a new node, and you will figure out how you should insert the new node into the tree(**Hint**: draw out a tree, and see what happens when you add a new number node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
 
+# Assumptions:
+- assume that 'expression' will have NO spaces
+- assume that 'expression' will have NO parenthesis(unless you want an extra challenge ;))
+- assume that 'expression' will have the proper amount of operands and operators(so an infix expression like "1+2x" is illegal)
+- assume that 'expression' will have no unary minus/unary plus (so an infix expression like "1x-2" is illegal)
+- assume that all operators are left associative
+- assume that all operators can consist of only +, -, x, /, and ^.
+
  **2nd Part(easier part): postfix evaluation algorithm**
   Once you have the proper tree setup, you now need to implement the postfix evaluation algorithm. 
   
@@ -36,7 +44,18 @@ Here is the algorithm(taken from GeeksForGeeks):
      b) If the element is a operator, pop operands for the operator from stack. Evaluate the operator and push the result back to the stack
   3) When the expression is ended, the number in the stack is the final answer
 
-So, suppose we have the expression "12x3+". By the algorithm, we push '1' to the stack. Then, we push '2' to the stack. Then, when we encounter 'x', we pop 2 from stack and pop 1 from stack. Multiply 1x2 to get result 2. Push 2 to stack. Then, push 3 to stack. Then, we when we encounter '+', pop 3 from stack and pop 2 from stack. Add 2+3 to ge result 5. Push 5 to stack. Return result 5. 
+So, suppose we have the expression "12x3+". By the algorithm, we push '1' to the stack. Then, we push '2' to the stack. Then, when we encounter 'x', we pop 2 from stack and pop 1 from stack. Multiply 1x2 to get result 2. Push 2 to stack. Then, push 3 to stack. Then, we when we encounter '+', pop 3 from stack and pop 2 from stack. Add 2+3 to get result 5. Push 5 to stack. 
+
+You are tasked to impelement one function:
+void evaluate_helper(shared_ptr<Node> root, stack<int>& tokens) {
+(**Hint**: what kind of traversal would you need for POSTfix expression?)
+
+
+
+# Code that is Implemented for you
+
+
+
 
 side note:
 You can also look at my Rubix files... but they're not even close to complete. The idea was to make a Rubix cube, randomly scramble it, and then try to solve it using the A* algorithm. However, it is too time consuming for me to do for an extra credit assignment, so I leave it to you if you want to impelement it as a future homework assignment. 
