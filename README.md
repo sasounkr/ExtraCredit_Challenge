@@ -48,7 +48,7 @@ In main.cpp, the program will prompt you to enter an expression. If you impeleme
 - assume that `expression` will have the proper amount of operands and operators(so an infix expression like "1+2x" is illegal)
 - assume that `expression` will have no unary minus/unary plus (so an infix expression like "1x-2" is illegal)
 - assume that all operators are left associative
-- assume that all operators can consist of only +, -, x, /, and ^.
+- assume that all operators can consist of only `+`, `-`, `x`, `/`, and `^`.
 
 # 2nd Part(easier part): postfix evaluation algorithm
   Once you have the proper tree setup, you now need to implement the postfix evaluation algorithm. 
