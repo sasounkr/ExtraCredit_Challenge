@@ -42,11 +42,11 @@ You will implement 2 functions:
 In main.cpp, the program will prompt you to enter an expression. If you impelemented part 1 correctly, the program should spit out the exact same expression you entered. 
 
 # Assumptions:
-- assume that 'expression' can have only SINGLE DIGIT numbers or operators
-- assume that 'expression' will have NO spaces
-- assume that 'expression' will have NO parenthesis(unless you want an extra challenge ;))
-- assume that 'expression' will have the proper amount of operands and operators(so an infix expression like "1+2x" is illegal)
-- assume that 'expression' will have no unary minus/unary plus (so an infix expression like "1x-2" is illegal)
+- assume that `expression` can have only SINGLE DIGIT numbers or operators
+- assume that `expression` will have NO spaces
+- assume that `expression` will have NO parenthesis(unless you want an extra challenge ;))
+- assume that `expression` will have the proper amount of operands and operators(so an infix expression like "1+2x" is illegal)
+- assume that `expression` will have no unary minus/unary plus (so an infix expression like "1x-2" is illegal)
 - assume that all operators are left associative
 - assume that all operators can consist of only +, -, x, /, and ^.
 
