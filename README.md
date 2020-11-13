@@ -56,8 +56,8 @@ In main.cpp, the program will prompt you to enter an expression. If you impeleme
 Here is the algorithm(taken from GeeksForGeeks):
   1) Create a stack to store operands (or values).
   2) Scan the given expression and do following for every scanned element.
-     a) If the element is a number, push it into the stack
-     b) If the element is a operator, pop operands for the operator from stack. Evaluate the operator and push the result back to the stack
+    - a) If the element is a number, push it into the stack
+    - b) If the element is a operator, pop operands for the operator from stack. Evaluate the operator and push the result back to the stack
   3) When the expression is ended, the number in the stack is the final answer
 
 So, suppose we have the expression "12x3+". By the algorithm, we push '1' to the stack. Then, we push '2' to the stack. Then, when we encounter 'x', we pop 2 from stack and pop 1 from stack. Multiply 1x2 to get result 2. Push 2 to stack. Then, push 3 to stack. Then, we when we encounter '+', pop 3 from stack and pop 2 from stack. Add 2+3 to get result 5. Push 5 to stack. 
