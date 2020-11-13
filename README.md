@@ -1,4 +1,4 @@
-# ExtraCredit_Challenge
+# PLEASE READ THIS
 Welcome to my github page!
 
 The solution files for the challenge problem are located at ec/bt-postfix directory.
