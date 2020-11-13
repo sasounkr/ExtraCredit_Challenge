@@ -21,11 +21,22 @@ For example, if you were to enter "1x2+3", you program should come up with the t
                1     2
 You will implement 2 functions:  
 (1) shared_ptr<Node> insert_op(shared_ptr<Node> root, char op)
-  Assuming 'op' is an operator, you will allocate a new node, and I'll leave it to you to figure out where your new node needs to be inserted(**Hint**: draw out a tree, and see what happens when you add a new operator node). This function must return the root of the tree(so if you decide to impelement you'd most probably need a helper function.
+  Assuming 'op' is an operator, you will allocate a new node, and I'll leave it to you to figure out where your new node needs to be inserted(**Hint**: draw out a tree, and see what happens when you add a new operator node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
   
-(2) shared_ptr<Node> insert_num(shared_ptr<Node> root, char num) {
+(2) shared_ptr<Node> insert_num(shared_ptr<Node> root, char num) 
+  Assuming 'num' is a number character, you will allocate a new node, and you will figure out how you should insert the new node into the tree(**Hint**: draw out a tree, and see what happens when you add a new number node). This function must return the root of the tree(so if you decide to impelement recursively you'd most probably need a helper function).
 
+ **2nd Part(easier part): postfix evaluation algorithm**
+  Once you have the proper tree setup, you now need to implement the postfix evaluation algorithm. 
+  
+Here is the algorithm(taken from GeeksForGeeks):
+  1) Create a stack to store operands (or values).
+  2) Scan the given expression and do following for every scanned element.
+     a) If the element is a number, push it into the stack
+     b) If the element is a operator, pop operands for the operator from stack. Evaluate the operator and push the result back to the stack
+  3) When the expression is ended, the number in the stack is the final answer
 
+So, suppose we have the expression "12x3+". By the algorithm, we push '1' to the stack. Then, we push '2' to the stack. Then, when we encounter 'x', we pop 2 from stack and pop 1 from stack. Multiply 1x2 to get result 2. Push 2 to stack. Then, push 3 to stack. Then, we when we encounter '+', pop 3 from stack and pop 2 from stack. Add 2+3 to ge result 5. Push 5 to stack. Return result 5. 
 
 side note:
 You can also look at my Rubix files... but they're not even close to complete. The idea was to make a Rubix cube, randomly scramble it, and then try to solve it using the A* algorithm. However, it is too time consuming for me to do for an extra credit assignment, so I leave it to you if you want to impelement it as a future homework assignment. 
