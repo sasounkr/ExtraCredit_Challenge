@@ -16,9 +16,9 @@ The solution files for the challenge problem are located at ```ec/bt-postfix-sol
 - A constant map `OP_PRECEDENCE` is provided. Given an operator character, OP_PRECEDENCE will give you the precedence value of that operator. For example precedence('x') > precedence('+'). 
 - `bool greater_precedence(char lhs, char rhs)`, assuming lhs and rhs are operators, greater_precedence() will return true if precedence(lhs) > precedence(rhs). So greater_precedence('x', '+') evaluate to true.
 - `bool is_op(char t)`, returns true if `t` is an operator. This function is very usefule for your impelemenetation!!!
-- ```shared_ptr<Node> convert_to_tree(string expression)```, assuming a legal expression, and your impelementation is correct, this function will turn an expression into a tree
-- ```int evaluate(string expression)```, assuming a legal expression, this function relies on the helper function ```void evaluate_helper(shared_ptr<Node> root, stack<int>& tokens``` that you will implement
-- ```void clear(shared_ptr<Node>& root```, simply deallocates memory
+- `shared_ptr<Node> convert_to_tree(string expression)`, assuming a legal expression, and your impelementation is correct, this function will turn an expression into a tree
+- `int evaluate(string expression)`, assuming a legal expression, this function relies on the helper function `void evaluate_helper(shared_ptr<Node> root, stack<int>& tokens` that you will implement
+- `void clear(shared_ptr<Node>& root`, simply deallocates memory
 
 
 # 1st Part(harder part): setting up the binary tree
